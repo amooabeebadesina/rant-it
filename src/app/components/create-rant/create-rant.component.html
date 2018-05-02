@@ -1,0 +1,55 @@
+<ul id="menu" class="mfb-component--br">
+  <li class="mfb-component__wrap">
+    <button
+      class="mfb-component__button--main btn-lg floating_button"
+      data-toggle="modal" data-target="#formModal">
+      <i class="fa fa-pencil"></i>
+    </button>
+  </li>
+</ul>
+<div id="formModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form #form="ngForm">
+          <select name="faculty" #faculty
+                  [(ngModel)] = selected_faculty
+                  class="form-control" required>
+            <option [value]="null" [selected]="true"> Select Faculty </option>
+            <option *ngFor="let faculty of faculties" [value]="faculty">
+              {{faculty}}
+            </option>
+          </select><br/>
+          <textarea
+            class="form-control"
+            name="rant" rows="15"
+            minlength="20"
+            maxlength="1000"
+            (ngModelChange)="decreaseCharacters(rant.value)"
+            required [(ngModel)]="rant_body"
+            #rant placeholder="Rant here">
+
+          </textarea>
+          <p class="character_count">{{no_of_characters}} characters left</p>
+          <button type="button"
+                  (click)="onSubmit()"
+                  class="btn btn-primary btn-lg"
+                  data-dismiss="modal"
+                  [disabled]="!form.valid">Fire!
+          </button>
+          <button type="button"
+                  class="btn btn-danger btn-lg"
+                  data-dismiss="modal">Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

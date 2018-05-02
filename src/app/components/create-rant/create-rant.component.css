@@ -1,0 +1,17 @@
+
+@media (min-width: 800px) {
+  .mfb-component--br {
+    margin: 25px 50px 100px 25px !important;
+  }
+  .mfb-component__button--main {
+    height: 80px;
+    width: 80px;
+  }
+  .mfb-component__button--main i {
+    font-size : 25px;
+  }
+}
+
+.character_count {
+  color: #343434;
+}

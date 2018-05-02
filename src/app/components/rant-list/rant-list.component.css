@@ -1,0 +1,17 @@
+.rant-list{
+  padding: 80px 20px 1px 20px;
+  background: #efefef;
+}
+
+.navigation-btn i{
+  color: #555555;
+  font-size: 50px;
+  top: 40%;
+  z-index: 20;
+  position : fixed;
+}
+
+.navigation-btn i:hover {
+  cursor: pointer;
+  color: darkblue;
+}

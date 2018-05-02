@@ -1,0 +1,24 @@
+<div class="card" (click)="onSelect()">
+  <h3 class="text-center" appRandomColor>
+    <i class="fa fa-university">
+    </i>
+    {{rant.faculty}}
+  </h3>
+  <p>
+    {{rant.body | shorten}}
+    ...
+    <a (click)="onSelect()">Read More</a>
+  </p>
+  <!--<span class="pull-right">
+    <i class="fa  fa-thumbs-o-up
+        like-icon"
+       (click)="updateClaps()">
+    </i>
+  </span>-->
+  <span>
+    {{rant.claps}}
+    <i class="fa fa-heart
+        likes">
+    </i>
+  </span>
+</div>
